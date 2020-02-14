@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-bool isOperator(char c) {
+int isOperator(char c) {
 	if (c=='+' || c=='-' || c=='*' || c=='/' || c=='^' || c=='(' || c==')'){
-		return true;
+		return 1;
 	}
-	return false;
+	return 0;
 }
 
 int precedencia (char x, char y) {
@@ -48,9 +48,9 @@ int precedencia (char x, char y) {
 }
 
 int main() {
-	char *inf = new char[401];
-	char *post = new char[401];
-	char *pila = new char[200];
+	char inf [401];
+	char post [401];
+	char pila [200];
 	int ptr=0;
 	int j=0;
 
