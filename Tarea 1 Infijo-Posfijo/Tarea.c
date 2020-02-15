@@ -23,8 +23,6 @@ int precedencia (char x, char y) {
 		case '|':
 			prec1=4;
 			break;
-		case '^':
-			prec1=5;
 	}
 
 	switch(y) {
@@ -40,8 +38,6 @@ int precedencia (char x, char y) {
 	case '|':
 		prec2=4;
 		break;
-	case '^':
-		prec2=5;
 	}
 
 	return prec1-prec2;
