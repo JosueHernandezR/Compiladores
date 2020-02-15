@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int isOperator(char c) {
-	if (c=='+' || c=='-' || c=='*' || c=='/' || c=='^' || c=='(' || c==')'){
+	if (c=='+' || c=='-' || c=='*' || c=='|' || c=='(' || c==')'){
 		return 1;
 	}
 	return 0;
@@ -11,37 +11,37 @@ int precedencia (char x, char y) {
 	int prec1, prec2;
 
 	switch(x) {
-		case '+':
+		case '(':
 			prec1=1;
 			break;
-		case '-':
+		case '+':
 			prec1=2;
 			break;
-		case '*':
+		case '-':
 			prec1=3;
 			break;
-		case '/':
+		case '*':
 			prec1=4;
 			break;
-		case '^':
+		case '|':
 			prec1=5;
 	}
 
 	switch(y) {
-	case '+':
-		prec2=1;
-		break;
-	case '-':
-		prec2=2;
-		break;
-	case '*':
-		prec2=3;
-		break;
-	case '/':
-		prec2=4;
-		break;
-	case '^':
-		prec2=5;
+		case '(':
+			prec1=1;
+			break;
+		case '+':
+			prec1=2;
+			break;
+		case '-':
+			prec1=3;
+			break;
+		case '*':
+			prec1=4;
+			break;
+		case '|':
+			prec1=5;
 	}
 
 	return prec1-prec2;
