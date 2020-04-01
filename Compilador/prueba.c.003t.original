@@ -1,0 +1,23 @@
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  printf ((const char * restrict) "Hola mundo");
+  {
+    int i = 0;
+
+        int i = 0;
+    goto <D.2252>;
+    <D.2251>:;
+    printf ((const char * restrict) "Soy un for\n");
+    i++ ;
+    <D.2252>:;
+    if (i <= 9) goto <D.2251>; else goto <D.2253>;
+    <D.2253>:;
+  }
+  return 0;
+}
+return 0;
+

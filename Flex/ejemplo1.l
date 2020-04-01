@@ -1,0 +1,2 @@
+%%
+hola                printf("adios");

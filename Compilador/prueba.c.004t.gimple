@@ -1,0 +1,26 @@
+main ()
+{
+  int D.2255;
+
+  {
+    printf ("Hola mundo");
+    {
+      int i;
+
+      i = 0;
+      goto <D.2252>;
+      <D.2251>:
+      __builtin_puts (&"Soy un for"[0]);
+      i = i + 1;
+      <D.2252>:
+      if (i <= 9) goto <D.2251>; else goto <D.2253>;
+      <D.2253>:
+    }
+    D.2255 = 0;
+    return D.2255;
+  }
+  D.2255 = 0;
+  return D.2255;
+}
+
+
