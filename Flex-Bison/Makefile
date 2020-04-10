@@ -7,6 +7,6 @@ Practica.tab.o: Practica.tab.c
 lex.yy.o: lex.yy.c
 	gcc lex.yy.c -c
 a.out: Practica.tab.o lex.yy.o
-	gcc Practica.tab.o lex.yy.0 -ll
+	gcc Practica.tab.o lex.yy.o -ll
 run: a.out
 	./a.out
